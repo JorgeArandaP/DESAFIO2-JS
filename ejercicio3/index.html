@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel = 'stylesheet'>
+</head>
+<body>
+    
+    <section class="password">
+        <h2>Ingresa password</h2>
+        <div class = 'digitos'>
+            <input id="primero" type="number" min="0" max="9">
+            <input id="segundo" type="number" min="0" max="9">
+            <input id="tercero" type="number" min="0" max="9">
+        </div>
+        
+        <button id="bt-verifica" onclick="
+            const digito1 = document.querySelector('#primero').value
+            const digito2 = document.querySelector('#segundo').value
+            const digito3 = document.querySelector('#tercero').value
+            const respuesta = document.querySelector('#resultado')
+
+            if (digito1 == 9 && digito2 == 1 && digito3 == 1) {
+                respuesta.innerHTML = 'Password correcto'
+                respuesta.style.color = 'green'
+            }
+
+            else if (digito1 == 7 && digito2 == 1 && digito3 == 4) {
+                respuesta.innerHTML = 'Password correcto'
+                respuesta.style.color = 'green'
+            }
+
+            else {
+                respuesta.innerHTML = 'Password incorrecto'
+                respuesta.style.color = 'red'
+            }
+        ">Verificar</button>
+
+        <p id="resultado"></p>
+
+    </section>
+    
+</body>
+</html>

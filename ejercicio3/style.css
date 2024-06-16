@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(22, 38, 60);
+    color: azure;
+}
+
+.password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    
+}
+
+.digitos {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10%;
+    margin-bottom: 20px;
+
+}
+
+.digitos input {
+    margin-inline: 10px;
+    width: 50px;
+}
+
+.password p {
+    font-size: x-large;
+}
+
+.password button {
+    border: solid 1px yellowgreen;
+    border-radius: 10%;
+    
+    /* width: auto; */
+}

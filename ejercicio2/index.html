@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+   
+    <p>Puedes seleccionar hasta 10 stickers en total!</p>
+    
+    <section class="galeria">
+        <div>
+            <img src="./1.jpg" alt="img1">
+            <input id="sticker1" type="number" min="0" step="1">
+        </div>
+        <div>
+            <img src="./2.jpg" alt="img2">
+            <input id="sticker2" type="number" min="0" step="1">
+        </div>
+        <div>
+            <img src="./3.jpg" alt="img3">
+            <input id="sticker3" type="number" min="0" step="1">
+        </div>        
+    </section>
+    <section class="verificar">
+        <p id="mensaje"></p>
+        <button id="bt-verifica" onclick="
+            const ctd1 = Number(document.querySelector('#sticker1').value)
+            const ctd2 = Number(document.querySelector('#sticker2').value)
+            const ctd3 = Number(document.querySelector('#sticker3').value)
+            const msje = document.querySelector('#mensaje')
+            suma = ctd1+ctd2+ctd3
+            console.log(suma)
+
+            if (suma <= 10) {
+                msje.innerHTML = 'Llevas ' + String(suma) + ' stickers'
+            }
+            else {
+                msje.innerHTML = 'Llevas demaciados stickers!'
+            }
+        ">Verificar</button>
+    </section>
+</body>
+</html>
